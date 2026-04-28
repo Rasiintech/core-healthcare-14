@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_import": 1,
- "allow_rename": 1,
  "autoname": "naming_series:",
  "creation": "2016-02-23 11:20:53.565119",
  "doctype": "DocType",
@@ -357,7 +356,7 @@
  ],
  "image_field": "image",
  "links": [],
- "modified": "2023-03-04 18:33:25.753648",
+ "modified": "2026-02-23 14:08:49.351290",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Healthcare Practitioner",
@@ -365,41 +364,30 @@
  "owner": "Administrator",
  "permissions": [
   {
-   "create": 1,
    "email": 1,
    "print": 1,
-   "read": 1,
    "report": 1,
    "role": "Laboratory User",
    "select": 1,
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
-   "read": 1,
    "report": 1,
    "role": "Physician",
    "select": 1,
-   "share": 1,
-   "write": 1
+   "share": 1
   },
   {
-   "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
-   "read": 1,
    "report": 1,
    "role": "Nursing User",
    "select": 1,
-   "share": 1,
-   "write": 1
+   "share": 1
   }
  ],
  "quick_entry": 1,

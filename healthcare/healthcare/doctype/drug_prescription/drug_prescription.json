@@ -1,7 +1,6 @@
 {
  "actions": [],
  "allow_copy": 1,
- "beta": 0,
  "creation": "2016-09-16 16:41:45.533374",
  "doctype": "DocType",
  "document_type": "Document",
@@ -34,7 +33,6 @@
    "fetch_from": "drug_code.item_name",
    "fieldname": "drug_name",
    "fieldtype": "Data",
-   "in_list_view": 1,
    "label": "Drug Name / Description"
   },
   {
@@ -42,18 +40,16 @@
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "in_list_view": 1,
-   "label": "Dosage",
-   "options": "Prescription Dosage",
-   "reqd": 1
+   "label": "Frequecy",
+   "options": "Prescription Dosage"
   },
   {
    "fieldname": "period",
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "in_list_view": 1,
-   "label": "Period",
-   "options": "Prescription Duration",
-   "reqd": 1
+   "label": "Dosage",
+   "options": "Prescription Duration"
   },
   {
    "allow_in_quick_entry": 1,
@@ -61,8 +57,7 @@
    "fieldtype": "Link",
    "ignore_user_permissions": 1,
    "label": "Dosage Form",
-   "options": "Dosage Form",
-   "reqd": 1
+   "options": "Dosage Form"
   },
   {
    "fieldname": "column_break_7",
@@ -110,7 +105,7 @@
  ],
  "istable": 1,
  "links": [],
- "modified": "2021-06-11 11:53:06.343704",
+ "modified": "2026-01-01 14:51:53.250799",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Drug Prescription",
@@ -118,5 +113,6 @@
  "permissions": [],
  "restrict_to_domain": "Healthcare",
  "sort_field": "modified",
- "sort_order": "DESC"
+ "sort_order": "DESC",
+ "states": []
 }

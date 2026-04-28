@@ -382,7 +382,7 @@
   }
  ],
  "links": [],
- "modified": "2023-02-23 12:14:27.297802",
+ "modified": "2026-02-10 10:51:07.265597",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Lab Test Template",
@@ -391,7 +391,6 @@
  "permissions": [
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
@@ -409,6 +408,15 @@
    "report": 1,
    "role": "Laboratory User",
    "share": 1
+  },
+  {
+   "create": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "LabTest Approver",
+   "write": 1
   }
  ],
  "restrict_to_domain": "Healthcare",

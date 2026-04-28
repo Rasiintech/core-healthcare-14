@@ -134,7 +134,6 @@
    "options": "\nA Positive\nA Negative\nAB Positive\nAB Negative\nB Positive\nB Negative\nO Positive\nO Negative"
   },
   {
-   "bold": 1,
    "fieldname": "dob",
    "fieldtype": "Date",
    "in_preview": 1,
@@ -182,8 +181,7 @@
    "ignore_user_permissions": 1,
    "label": "Customer",
    "no_copy": 1,
-   "options": "Customer",
-   "set_only_once": 1
+   "options": "Customer"
   },
   {
    "fieldname": "report_preference",
@@ -489,10 +487,11 @@
  "image_field": "image",
  "links": [],
  "max_attachments": 50,
- "modified": "2023-01-13 17:48:59.069268",
+ "modified": "2026-02-02 17:21:43.413209",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Patient",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -520,7 +519,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -532,7 +530,6 @@
    "write": 1
   },
   {
-   "create": 1,
    "delete": 1,
    "email": 1,
    "export": 1,
@@ -540,6 +537,18 @@
    "read": 1,
    "report": 1,
    "role": "Nursing User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
    "share": 1,
    "write": 1
   }

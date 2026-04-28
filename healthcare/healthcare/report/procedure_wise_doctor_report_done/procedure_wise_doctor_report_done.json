@@ -1,0 +1,54 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2026-01-29 17:07:43.621570",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "default": "Today",
+   "fieldname": "Start_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  },
+  {
+   "default": "Today",
+   "fieldname": "End_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 1,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "logo",
+ "modified": "2026-03-26 22:17:01.344286",
+ "modified_by": "Administrator",
+ "module": "Healthcare",
+ "name": "Procedure Wise Doctor Report Done",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    S.practitioner AS \"Requesting Doctor:Data:150:\",\r\n    S.performing_practitioner AS \"Performing Doctor:Data:150:\",\r\n    S.patient AS \"Patient ID:Data:100:\",\r\n    S.patient_name AS \"Patient Name:Data:150:\",\r\n    S.procedure_template AS \"Service Name:Data:200\",\r\n    COUNT(*) AS \"QTY:Int:70\" ,\r\n    SI.net_amount AS \"Amount:Data:70\",\r\n    O.appointment_date AS \"Scheduled:Date:100\",\r\n    S.start_date AS \"Completed:Date:100\",\r\n    S.status AS \"Status:Data:100\"\r\n    \r\nFROM \r\n    `tabClinical Procedure` S , `tabOT Schedule` O, `tabSales Invoice Item` SI\r\n\r\n\r\nWHERE \r\n   -- S.status = \"Completed\"\r\n     S.ot_schedule =  O.name \r\n     and S.sales_invoice_item = SI.name\r\n     and  S.start_date BETWEEN %(Start_date)s AND %(End_date)s\r\nGROUP BY \r\n    S.procedure_template, S.status,S.patient_name\r\nORDER BY \r\n    S.procedure_template DESC;\r\n",
+ "ref_doctype": "Clinical Procedure",
+ "report_name": "Procedure Wise Doctor Report Done",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "Nursing User"
+  },
+  {
+   "role": "Physician"
+  },
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  }
+ ]
+}

@@ -3,7 +3,6 @@
  "allow_copy": 1,
  "allow_import": 1,
  "autoname": "naming_series:",
- "beta": 0,
  "creation": "2016-04-05 15:58:18.076977",
  "doctype": "DocType",
  "document_type": "Document",
@@ -215,6 +214,7 @@
    "label": "Patient Details"
   },
   {
+   "allow_on_submit": 1,
    "fetch_from": "patient.patient_name",
    "fieldname": "patient_name",
    "fieldtype": "Data",
@@ -224,10 +224,11 @@
  ],
  "is_submittable": 1,
  "links": [],
- "modified": "2020-07-30 16:53:13.076104",
+ "modified": "2026-01-03 03:03:36.374190",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Sample Collection",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
@@ -243,6 +244,18 @@
    "share": 1,
    "submit": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
   }
  ],
  "restrict_to_domain": "Healthcare",
@@ -250,6 +263,7 @@
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
+ "states": [],
  "title_field": "patient",
  "track_changes": 1,
  "track_seen": 1

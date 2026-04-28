@@ -9,10 +9,10 @@
   "naming_series",
   "title",
   "appointment",
-  "procedure_template",
   "column_break_30",
   "company",
   "invoiced",
+  "procedure_template",
   "section_break_6",
   "patient",
   "patient_name",
@@ -20,8 +20,8 @@
   "patient_age",
   "inpatient_record",
   "notes",
-  "column_break_7",
   "status",
+  "column_break_7",
   "practitioner",
   "practitioner_name",
   "medical_department",
@@ -100,6 +100,7 @@
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "medical_department",
    "fieldtype": "Link",
    "in_standard_filter": 1,
@@ -107,8 +108,10 @@
    "options": "Medical Department"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "practitioner",
    "fieldtype": "Link",
+   "hidden": 1,
    "in_standard_filter": 1,
    "label": "Healthcare Practitioner",
    "options": "Healthcare Practitioner"
@@ -266,12 +269,14 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "patient_name",
    "fieldtype": "Data",
    "label": "Patient Name",
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "practitioner_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -305,6 +310,7 @@
    "options": "Codification Table"
   }
  ],
+ "in_create": 1,
  "is_submittable": 1,
  "links": [
   {
@@ -312,7 +318,7 @@
    "link_fieldname": "reference_name"
   }
  ],
- "modified": "2023-02-23 18:57:21.878185",
+ "modified": "2026-04-27 11:58:32.280118",
  "modified_by": "Administrator",
  "module": "Healthcare",
  "name": "Clinical Procedure",
@@ -344,6 +350,18 @@
    "role": "Physician",
    "share": 1,
    "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1,
    "write": 1
   }
  ],
